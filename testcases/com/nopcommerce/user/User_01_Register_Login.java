@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 public class User_01_Register_Login {
 	@BeforeClass
 	public void beforeClass() {
+		//Test
 	}
 
 	@Test
