@@ -307,7 +307,7 @@ public class BasePage {
 		explicitwait.until(ExpectedConditions.visibilityOfElementLocated(getByXpath(xpathLocator)));
 	}
 
-	public void wwaitForAllElementVisibile(WebDriver driver, String xpathLocator) {
+	public void waitForAllElementVisibile(WebDriver driver, String xpathLocator) {
 		WebDriverWait explicitwait = new WebDriverWait(driver, longTimeout);
 		explicitwait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(xpathLocator)));
 	}
@@ -317,7 +317,7 @@ public class BasePage {
 		explicitwait.until(ExpectedConditions.invisibilityOfElementLocated(getByXpath(xpathLocator)));
 	}
 
-	public void wwaitForAllElementInvisibile(WebDriver driver, String xpathLocator) {
+	public void waitForAllElementInvisibile(WebDriver driver, String xpathLocator) {
 		WebDriverWait explicitwait = new WebDriverWait(driver, longTimeout);
 		explicitwait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, xpathLocator)));
 	}
