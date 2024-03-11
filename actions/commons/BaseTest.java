@@ -1,5 +1,8 @@
 package commons;
 
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,7 +21,13 @@ public class BaseTest {
 		} else {
 			throw new RuntimeException("Browser name invalid");
 		}
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get("https://demo.nopcommerce.com/");
 		return driver;
-
+	}
+	protected int generateFakeNumer() {
+		Random rand = new Random();
+		return rand.nextInt(9999);
 	}
 }
